@@ -59,7 +59,7 @@ export let products = []
 
 export function loadProductFetch() {
     const promise = fetch(
-      'http://localhost:3000/products'
+      'https://raw.githubusercontent.com/kkkcatt/MY-AMAZON-PROJECT-VERSION/refs/heads/main/backend/products.json'
     ).then((response) => {
     return response.json()
   }).then((productsData) => {
@@ -89,7 +89,7 @@ export function loadProducts(fun) {
     console.log('load products')
     fun()
   })
-  xhr.open('GET','http://localhost:3000/products')
+  xhr.open('GET','https://raw.githubusercontent.com/kkkcatt/MY-AMAZON-PROJECT-VERSION/refs/heads/main/backend/products.json')
   xhr.send()
 }
 
